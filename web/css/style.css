@@ -1,0 +1,48 @@
+body {
+    font-family: 'Manjari', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: left;
+    padding: 5px 20px;
+    background-color: #009688;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+a, h2 {
+    color: #2196f3;
+}
+
+.container {
+    margin: 2em;
+    background: #fff;
+}
+
+.content {
+    padding: 10px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+.actions {
+    padding: 10px;
+}
+
+.error {
+    color: red;
+}
+
+#syllabalize {
+    font-size: 1em;
+    padding: 5px;
+}
+
+.syllable {
+    border-right: 1px solid grey;
+    padding: 2px;
+    font-size: 1.2em;
+}
