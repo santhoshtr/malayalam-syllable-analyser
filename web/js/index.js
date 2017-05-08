@@ -4,7 +4,7 @@ $("#syllabalize").click(function() {
     $error=$('.error');
     content = $(".content").val();
     try {
-        result = mlSyllableParser.parse(content);
+        result = malayalamSyllableParser.parse(content);
         showResults(result);
         $error.empty();
     } catch (error) {

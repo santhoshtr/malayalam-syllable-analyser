@@ -1,0 +1,16 @@
+{
+	"extends": "eslint:recommended",
+	"env": {
+		"browser": true,
+		"jquery": true,
+		"qunit": true,
+		"node": true
+	},
+	"globals": {
+		"require": false
+	},
+	"rules": {
+		"dot-notation": 0,
+		"wrap-iife": 0
+	}
+}

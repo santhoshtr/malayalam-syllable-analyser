@@ -4,7 +4,7 @@ Syllable = s:( Vowel
 	/ Chillu
 	)  {
 		if(Array.isArray(s)){
-			return   s.join('')
+			return s.join('')
 		}
 		return s
 	}
@@ -16,12 +16,13 @@ Visarga = [ഃ]
 Anuswara = [ം]
 Chillu = [ൻർൽൾൿൺ]
 Conjunct = c1:Consonant cv:(Virama Consonant)+  & {
-	if(cv.length>5) return false;
+	if(cv.length>=4) return false;
 	if(cv.length<=3) return true;
 	if(cv[cv.length-1][1] !== 'യ') return false;
 	return true;
 } {
-	return [c1,cv].join('');
+	// Recursive flatten and join
+	return [].concat.apply(c1,cv).join('');
 }
 
 Signs = v:VowelSign? h:Visarga? a:Anuswara? x:Virama? & {
