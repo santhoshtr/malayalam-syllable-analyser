@@ -10,6 +10,7 @@ header {
     background-color: #009688;
     position: sticky;
     top: 0;
+    color: #fff;
     z-index: 10;
 }
 
