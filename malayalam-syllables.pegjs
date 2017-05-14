@@ -1,11 +1,11 @@
 Word = Syllable+
 Syllable = s:( Vowel
-	/ ( Conjunct / Consonant ) Signs
 	/ Chillu
+	/ ( Conjunct / Consonant ) Signs
 	/ ZWNJ
 	) {
-		if(Array.isArray(s)){
-			return s.join('')
+		if( Array.isArray( s ) ) {
+			return s.join( '' )
 		}
 		return s
 	}
@@ -15,15 +15,15 @@ Consonant = [കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫ�
 Virama = [്]
 Visarga = [ഃ]
 Anuswara = [ം]
-Chillu = [ൻർൽൾൿൺൔൕൖ]
-ZWNJ = [‌]
-ZWJ = [‍]
+Chillu = [ൻർൽൾൿൺൔൕൖ] / (Consonant Virama ZWJ)
+ZWNJ = [\u200C]
+ZWJ = [\u200D]
 Conjunct = c1:Consonant cv:(Virama Consonant)+ & {
 	if(cv.length > 4) return false;
 	return true;
 } {
 	// Recursive flatten and join
-	return [].concat.apply(c1,cv).join('');
+	return [].concat.apply(c1,cv).join( '' );
 }
 
 Signs = v:VowelSign? h:Visarga? a:Anuswara? x:Virama? & {
@@ -31,18 +31,18 @@ Signs = v:VowelSign? h:Visarga? a:Anuswara? x:Virama? & {
 		// Anuswara cant be with a virama
 		return false;
 	}
-	if( v && x ) {
+	if ( v && x ) {
 		// Samvruthokaram, v must be u sign
 		return v === 'ു';
 	}
-	if( h && (a || x) ) {
+	if ( h && (a || x) ) {
 		// Nothing comes with Visarga
 		return false;
 	}
-	if( x && location().start.offset === input.length) {
+	if ( x && location().start.offset === input.length ) {
 		return true;
 	}
 	return true;
 } {
-	return [v,h,a,x].join('')
+	return [v, h, a, x].join( '' )
 }

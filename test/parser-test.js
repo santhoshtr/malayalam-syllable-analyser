@@ -12,7 +12,8 @@ describe('Syllabalize tests', function() {
 		"ദുഃഖം": ['ദുഃ', 'ഖം'],
 		"കുടുംബം": ['കു','ടും', 'ബം'],
 		"ചട്ടീംകലോം": ['ച', 'ട്ടീം', 'ക', 'ലോം'],
-		"അവന്‍": ['അ','വ','ന്‍']
+		"അവന്‍": ['അ','വ','ന്‍'],
+		"ജോസ്‌തോമസ്": ['ജോ', 'സ്', '\u200C' , 'തോ', 'മ', 'സ്']
 	};
 
 	function parseTest(word, expected) {
@@ -29,7 +30,8 @@ describe('Invalid syllables tests', function() {
 	var tests = {
 		"ആാ": "Vowel sign should not come after vowels",
 		"ദുഃിഖം":"After visarga vowel sign can't come",
-		"അതി്":"After ഇ vowel sign virama can't come"
+		"അതി്":"After ഇ vowel sign virama can't come",
+		"കാാ": "Vowel signs can't be repeated"
 	};
 
 	function parseErrorTest(word ) {
