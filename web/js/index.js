@@ -15,6 +15,6 @@ $("#syllabalize").click(function() {
 function showResults(result) {
     var $result = $(".result").empty();
     for (var i = 0; i < result.length; i++) {
-        $result.append($("<span>").addClass("syllable").text(result[i]));
+        $result.append($("<span>").addClass("chip").text(result[i]));
     }
 }
