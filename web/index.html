@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang=en>
+
 <head>
-<meta charset="UTF-8">
-<title>Malayalam syllable analyser</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-<link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<title>Malayalam syllable analyser</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-    <header >
-            <nav>
-                    <a href="#" class="brand-logo">Malayalam syllable analyser</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li><a class="selected" href="#">Phonetic analyser</a></li>
-                            <li><a class="selected" href="#">IPA Converter</a></li>
-                            <li><a class="selected" href="syllables/web/">Syllable analyser</a></li>
-                    </ul> <!-- cd-tabs-navigation -->
-            </nav>
-    </header>
-    <div class="container">
-        <label for="word_to_syllabalize">Word to syllabalize</label>
-        <input id="word_to_syllabalize" class='content'></input>
-        <div class='actions'>
-            <a class="waves-effect waves-light btn" id='syllabalize'>Syllabalize</a>
-        </div>
-        <div class='result'></div>
-        <div class='error'></div>
-    </div>
-    <footer class="page-footer">
-        <div class="footer-copyright">
-                <a class="grey-text text-lighten-4 right" href="https://github.com/kavyamanohar/ml-phonetic-analyser">Malayalam phonetic analyser</a>
-        </div>
-    </footer>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-    <script src='../lib/malayalam-syllables.js'></script>
-    <script src="js/index.js"></script>
+	<header>
+		<nav>
+			<a href="#" class="brand-logo">Malayalam syllable analyser</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a class="selected" href="#">Phonetic analyser</a></li>
+				<li><a class="selected" href="#">IPA Converter</a></li>
+				<li><a class="selected" href="syllables/web/">Syllable analyser</a></li>
+			</ul>
+			<!-- cd-tabs-navigation -->
+		</nav>
+	</header>
+	<div class="container">
+		<label for="word_to_syllabalize">Word to syllabalize</label>
+		<input id="word_to_syllabalize" class='content'></input>
+		<div class='actions'>
+			<a class="waves-effect waves-light btn" id='syllabalize'>Syllabalize</a>
+		</div>
+		<div class='result'></div>
+		<div class='error'></div>
+	</div>
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<a class="grey-text text-lighten-4 right" href="https://github.com/kavyamanohar/ml-phonetic-analyser">Malayalam phonetic analyser</a>
+		</div>
+	</footer>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script src='../lib/malayalam-syllables.js'></script>
+	<script src="js/index.js"></script>
 </body>
+
 </html>
