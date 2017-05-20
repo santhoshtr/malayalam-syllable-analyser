@@ -18,12 +18,8 @@ Anuswara = [ം]
 Chillu = [ൻർൽൾൿൺൔൕൖ] / (Consonant Virama ZWJ)
 ZWNJ = [\u200C]
 ZWJ = [\u200D]
-Conjunct = c1:Consonant cv:(Virama Consonant)+ & {
-	if(cv.length > 4) return false;
-	return true;
-} {
-	// Recursive flatten and join
-	return [].concat.apply(c1,cv).join( '' );
+Conjunct = c1:Consonant x:Virama c2:( Conjunct / Consonant ) {
+	return [c1, x, c2].join( '' );
 }
 
 Signs = v:VowelSign? h:Visarga? a:Anuswara? x:Virama? & {
