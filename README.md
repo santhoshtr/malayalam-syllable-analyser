@@ -42,7 +42,9 @@ Syllable boundaries
 If you want to know syllable boundaries and don't care about anything else, there is an easy way to find boundaries. A syllable boundary is after:
 
 1. A vowel. Note that this not vowel sign. Example: അ|റ, ഇ|ര, ഉ|പ്പ്
-2. A vowel sign, if not followed by virama, anuswara or visarga. Example: ത്തി|ൽ, പ്പു|ക, കു|ടും|ബം, ദുഃ|ഖം
-3. A consonant if followed by another consonant or chillu. Example: ത|റ, ഷ്ട|മി, കി|ൽ
+2. A vowel sign, if not followed by virama, anuswara or visarga. Example: ത്തി|ൽ, പു|ക,
+3. A consonant if followed by another consonant or chillu. Example: ത|റ, ഷ്ട|മി, ക|ൽ
 4. A chillu. Example: സ|ർ|പ്പം
-5. A ZWNJ is syllable boundary.
+5. An Anuswara. Example: കു|ടും|ബം,
+6. A Visarga. Example: ദുഃ|ഖം
+7. A ZWNJ is syllable boundary.
