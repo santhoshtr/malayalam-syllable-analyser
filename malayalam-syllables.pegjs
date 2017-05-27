@@ -4,7 +4,7 @@ Syllable = s:( Vowel
 	/ ( Conjunct / Consonant ) Signs
 	/ ZWNJ
 	) {
-		if( Array.isArray( s ) ) {
+		if ( Array.isArray( s ) ) {
 			return s.join( '' )
 		}
 		return s
@@ -15,11 +15,14 @@ Consonant = [കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫ�
 Virama = [്]
 Visarga = [ഃ]
 Anuswara = [ം]
+DotReph= [ൎ]
 Chillu = [ൻർൽൾൿൺൔൕൖ] / (Consonant Virama ZWJ)
 ZWNJ = [\u200C]
 ZWJ = [\u200D]
-Conjunct = c1:Consonant x:Virama c2:( Conjunct / Consonant ) {
-	return [c1, x, c2].join( '' );
+HalfConsonant = (c1:Consonant x:Virama) { return [c1, x].join( '' ); }
+	/ DotReph
+Conjunct = c1x:HalfConsonant c2:( Conjunct / Consonant ) {
+	return [c1x, c2].join( '' );
 }
 
 Signs = v:VowelSign? h:Visarga? a:Anuswara? x:Virama? & {

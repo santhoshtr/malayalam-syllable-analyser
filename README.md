@@ -18,7 +18,9 @@ Definitions
 8. `ZWNJ` Zero Width Non Joiner.\u200C
 9. `ZWJ` Zero with Joiner \u200D
 10. `Signs` A term used to address various signs that modify a `Consonant`. Any of `VowelSign`, `Virama`, `Anuswara`, `Visarga`.
-11. `Conjunct`: A `Consonant` combined with another `Conjunct` or `Consonant` using `Virama`. Example: സ+ ് + ത => സ്ത , സ്ത + ് + ര = സ്ത്ര. ദ്ധ + ് ര = ദ്ധ്ര, ദ്ധ്ര + ് + യ = ദ്ധ്ര്യ
+11. `HalfConsonant` A `Consonant` with `Virama` Example: പ്, ര്, മ് etc. Or a `DotReph`
+12. `DotReph`: The sign ൎ.
+13. `Conjunct`: A `HalfConsonant` combined with another `Conjunct` or `Consonant`. Example: സ+ ് + ത => സ്ത , സ്ത + ് + ര = സ്ത്ര. ദ്ധ + ് ര = ദ്ധ്ര, ദ്ധ്ര + ് + യ = ദ്ധ്ര്യ
 
 Syllable model
 ---------------
